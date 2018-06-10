@@ -1,17 +1,15 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color = "primary" align = "center">
     <ion-title>News Room</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <ion-list>
+      <ion-item *ngFor="let article of articles">
+        <strong>{{article.headline}}</strong>
+        <br>
+        {{article.content}}
+      </ion-item>
+    </ion-list>
 </ion-content>
